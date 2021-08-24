@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Party</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script src="url.js"></script>
+    <script src="jquery.js"></script>
+    <script src="two.js"></script>
+    <script src="has.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/edp1hux.js"></script>
+    <script type="text/javascript">
+      try {
+        Typekit.load();
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="./style.css" />
+
+    <script type="text/javascript" src="paper-full.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.core.min.js"
+    ></script>
+
+    <script type="text/paperscript" canvas="myCanvas">
+
+          var text = new PointText(new Point((view.size.width)/2, 50));
+          text.justification = 'center';
+          text.fillColor = 'white';
+
+
+      	var keyData = {
+      		q: {
+      		sound: new Howl({
+      		 	src: ['sound/meow1.wav']
+      		}),
+      		color: '#1abc9c'
+      		},
+      		w: {
+      		sound: new Howl({
+      		  src: ['sound/meow2.wav']
+      		}),
+      		color: '#2ecc71'
+      		},
+      		e: {
+      		sound: new Howl({
+      		  src: ['sound/meow3.wav']
+      		}),
+      		color: '#3498db'
+      		},
+      		r: {
+      		sound: new Howl({
+      		  src: ['sound/meow4.wav']
+      		}),
+      		color: '#9b59b6'
+      		},
+      		t: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/dotted-spiral.mp3']
+      		}),
+      		color: '#34495e'
+      		},
+      		y: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/flash-1.mp3']
+      		}),
+      		color: '#16a085'
+      		},
+      		u: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/flash-2.mp3']
+      		}),
+      		color: '#27ae60'
+      		},
+      		i: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/flash-3.mp3']
+      		}),
+      		color: '#2980b9'
+      		},
+      		o: {
+      		sound: new Howl({
+      		src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/glimmer.mp3']
+      		}),
+      		color: '#8e44ad'
+      		},
+      		p: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/moon.mp3']
+      		}),
+      		color: '#2c3e50'
+      		},
+      		a: {
+      		sound: new Howl({
+      		  src: ['sound/meow_a.wav']
+      		}),
+      		color: '#f1c40f'
+      		},
+      		s: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/piston-1.mp3']
+      		}),
+      		color: '#e67e22'
+      		},
+      		d: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/piston-2.mp3']
+      		}),
+      		color: '#e74c3c'
+      		},
+      		f: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/prism-1.mp3']
+      		}),
+      		color: '#95a5a6'
+      		},
+      		g: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/prism-2.mp3']
+      		}),
+      		color: '#f39c12'
+      		},
+      		h: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/prism-3.mp3']
+      		}),
+      		color: '#d35400'
+      		},
+      		j: {
+      		sound: new Howl({
+      		  src: ['sound/meow_j.wav']
+      		}),
+      		color: '#1abc9c'
+      		},
+      		k: {
+      		sound: new Howl({
+      		  src: ['sound/meow_k.wav']
+      		}),
+      		color: '#2ecc71'
+      		},
+      		l: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/strike.mp3']
+      		}),
+      		color: '#3498db'
+      		},
+      		z: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/suspension.mp3']
+      		}),
+      		color: '#9b59b6'
+      		},
+      		x: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/timer.mp3']
+      		}),
+      		color: '#34495e'
+      		},
+      		c: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/ufo.mp3']
+      		}),
+      		color: '#16a085'
+      		},
+      		v: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/veil.mp3']
+      		}),
+      		color: '#27ae60'
+      		},
+      		b: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/wipe.mp3']
+      		}),
+      		color: '#2980b9'
+      		},
+      		n: {
+      		sound: new Howl({
+      		src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/zig-zag.mp3']
+      		}),
+      		color: '#8e44ad'
+      		},
+      		m: {
+      		sound: new Howl({
+      		  src: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/1781740/moon.mp3']
+      		}),
+      		color: '#2c3e50'
+      		}
+      }
+
+      	var circles = [];
+
+      	function onKeyDown(event) {
+      		if(keyData[event.key]){
+
+      		var maxPoint = new Point(view.size.width, view.size.height);
+      		var randomPoint = Point.random();
+      		var point = maxPoint * randomPoint;
+      		var newCircle = new Path.Circle(point, 500);
+
+      		newCircle.fillColor = keyData[event.key].color;
+      		keyData[event.key].sound.play();
+      		circles.push(newCircle);
+      		}
+      	}
+
+        function onFrame(event){
+          for(var i = 0; i < circles.length; i++){
+            circles[i].scale(0.9);
+            circles[i].fillColor.hue += 1;
+            if(circles[i].area < 1){
+              circles[i].remove();
+              circles.splice(i, 1);
+              i--;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body style="background-image: url(img/bg_blue.png)">
+    <div id="css-modal">
+      <input id="modal" class="css-modal-check" type="checkbox" checked />
+      <div class="css-modal">
+        <label for="modal" class="close"></label>
+        <!-- <h2>Premium Member Area</h2> -->
+        <p>press any-key to make noises.</p>
+        <!--<div class="css-modal-btn"><a href="/#" title="Upgrade"><button class="btn btn-primary btn-md">START</button></a></div> -->
+      </div>
+      <div id="overlay"></div>
+    </div>
+
+    <canvas id="myCanvas" resize></canvas>
+
+    <div class="scripts">
+      <div class="parallax">
+        <div class="layer source-layer4"></div>
+        <div class="layer source-layer3"></div>
+        <div class="layer source-layer2"></div>
+        <div class="layer source-layer1"></div>
+        <div class="layer source-layer5"></div>
+        <div class="layer source-layer6"></div>
+      </div>
+
+      <input type="button" value="Play loop!" />
+
+      <!--Notice the pauses in the loopage. So sad. Why you hurt me so, browsers?-->
+      <audio loop>
+        <source src="sound/loops_8bit.mp3" type='audio/mpeg; codecs="mp3"' />
+      </audio>
+
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script src="./script.js"></script>
+      <script src="./loop.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.22/paper.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.js"></script>
+      <script src="./script.js"></script>
+    </div>
+  </body>
+</html>
