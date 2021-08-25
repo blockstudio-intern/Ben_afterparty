@@ -1,6 +1,9 @@
 body{
   overflow: hidden;
   font-family: 'Press Start 2P', cursive;
+  background-color : rgba(0, 255, 55, 0.603);
+
+   
 }
 
 
@@ -27,6 +30,14 @@ body{
   background-repeat: no-repeat;
   background-position: top center;
 }
+
+.bg-layer{
+  background-color: rgba(6, 143, 255, 0.829);
+  background-image: url(img/grid1.png);
+  
+
+}
+
 
 .source-layer1 {
   background-image: url(img/cloud_L.png);
