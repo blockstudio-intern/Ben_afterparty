@@ -272,41 +272,34 @@ h1 {
   background-size: cover;
 }
 
-#playlist li a {
+#playlist li  {
   color: rgb(73, 73, 73);
   text-decoration: none;
 }
 
-#playlist .current-song a {
+#playlist .current-song  {
   color: rgb(0, 0, 0);
 }
 
 
 
-@import url('//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic');
 @import url('//cdn.rawgit.com/necolas/normalize.css/master/normalize.css');
 @import url('//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css');
 
 
-#bg-selector {
-	font-size: 1em;
-	font-style: italic;
-}
+
 .color {
-	width: 24px;
-	height: 24px;
-	border: 1px solid #555;
+	width: 30px;
+	height: 35px;
+	border: 1px solid rgb(255, 255, 255);
 	display: inline-block;
 	margin: 0 0 0 0.2em;
 	cursor: pointer;
-  padding: 2px;
+  padding: 0px;
 }
-.color img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-}
+
 .gray {
+
 	background-color: #2C9DFF;
 }
 .black {
