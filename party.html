@@ -228,75 +228,86 @@
     </script>
   </head>
   <body>
+    <!-- Start Nav -->
+    <div class="nav">
+      <div
+        class="nav-item logo"
+        style="background-image: url(img/logo_sm.png)"
+      ></div>
 
-		  <!-- Start Nav -->
-		  <div class="nav">
-			<div class="nav-item logo" style="background-image: url(img/logo_sm.png);"></div>
-		
-			<div class="nav-item link">
-				<div href="https://www.facebook.com/blockstudiotw" class="icon"
-					style="background-image: url(img/facebook.png);">
-					<a href="https://www.facebook.com/blockstudiotw" class="icon-hover"
-						style="background-image: url(imh/facebook-hover.png);">
-					</a>
-				</div>
-				<div href="https://www.instagram.com/blockstudiotw/" class="icon"
-					style="background-image: url(img/instagram.png);">
-					<a href="https://www.facebook.com/blockstudiotw" class="icon-hover"
-						style="background-image: url(img/instagram-hover.png);">
-					</a>
-				</div>
-				<div href="https://blockstudio.tw/" class="icon"
-					style="background-image: url(img/official-website.png);">
-					<a href="https://www.facebook.com/blockstudiotw" class="icon-hover"
-						style="background-image: url(img/official-website-hover.png);">
-					</a>
-				</div>
-			</div>
-		</div>
-		<!-- End Nav -->
+      <div class="nav-item link">
+        <div
+          href="https://www.facebook.com/blockstudiotw"
+          class="icon"
+          style="background-image: url(img/facebook.png)"
+        >
+          <a
+            href="https://www.facebook.com/blockstudiotw"
+            class="icon-hover"
+            style="background-image: url(img/facebook-hover.png)"
+          >
+          </a>
+        </div>
+        <div
+          href="https://www.instagram.com/blockstudiotw/"
+          class="icon"
+          style="background-image: url(img/instagram.png)"
+        >
+          <a
+            href="https://www.facebook.com/blockstudiotw"
+            class="icon-hover"
+            style="background-image: url(img/instagram-hover.png)"
+          >
+          </a>
+        </div>
+        <div
+          href="https://blockstudio.tw/"
+          class="icon"
+          style="background-image: url(img/official-website.png)"
+        >
+          <a
+            href="https://www.facebook.com/blockstudiotw"
+            class="icon-hover"
+            style="background-image: url(img/official-website-hover.png)"
+          >
+          </a>
+        </div>
+      </div>
+	</div>
+
+    <!-- End Nav -->
     <div id="css-modal">
       <input id="modal" class="css-modal-check" type="checkbox" checked />
       <div class="css-modal">
         <label for="modal" class="close"></label>
         <!-- <h2>Premium Member Area</h2> -->
-        <p>press any-key to make noises.</p>
+        <p>press any-key to make noises!</p>
         <!--<div class="css-modal-btn"><a href="/#" title="Upgrade"><button class="btn btn-primary btn-md">START</button></a></div> -->
       </div>
 
-
-
-	  
       <div id="overlay"></div>
-    </div><div class="layer bg-layer"></div>
+    </div>
+    <div class="layer bg-layer"></div>
 
-
-	
-	
-    
-
-    <div class="scripts">		
-		
-      <div class="parallax">		
+    <div class="scripts">
+      <div class="parallax">
         <div class="layer source-layer4"></div>
         <div class="layer source-layer3"></div>
         <div class="layer source-layer2"></div>
         <div class="layer source-layer1"></div>
         <div class="layer source-layer5"></div>
         <div class="layer source-layer6"></div>
-		<canvas id="myCanvas" resize></canvas>
+        <canvas id="myCanvas" resize></canvas>
       </div>
 
+      <!-- <input type="button" value="" />
 
-
- 
-	  
-      <input type="button" value="" />
-
-      <!--Notice the pauses in the loopage. So sad. Why you hurt me so, browsers?-->
+      Notice the pauses in the loopage. So sad. Why you hurt me so, browsers?
       <audio loop>
         <source src="sound/loops_8bit.mp3" type='audio/mpeg; codecs="mp3"' />
-      </audio>
+      </audio> -->
+
+     
 
       <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
       <script src="js/script.js"></script>
@@ -306,5 +317,42 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.js"></script>
       <script src="./script.js"></script>
     </div>
+
+	<audio src="" controls id="audioPlayer" style="display: none">
+    </audio>
+    <ul id="playlist">
+      <li><a href="sound/loops_8bit.mp3">1</a></li>
+      <li><a href="sound/meow_j.wav">2</a></li>
+      <li><a href="sound/loops_8bit.mp3">3</a></li>
+      
+    </ul>
+
+    <div id="mute" class="btn"></div>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script src="audioPlayer.js"></script>
+    <script src="mute.js"></script>
+    <script>
+      /*
+    Default constructor configuration:
+        autoplay: false,
+        shuffle: false,
+        loop: false,
+        playerId: "audioPlayer",
+        playlistId: "playlist",
+        currentClass: "current-song"
+        
+        
+*/
+
+      // loads the audio player
+      var config = {
+        autoplay: true,
+        loop: true,
+        shuffle: true,
+      };
+      var playlist = new AudioPlaylist();
+    </script>
+
   </body>
 </html>
