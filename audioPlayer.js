@@ -20,15 +20,7 @@
 */
  
 class AudioPlaylist{
-    randomizeOrder(){
-        for (var i = this.trackOrder.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var temp = this.trackOrder[i];
-            this.trackOrder[i] = this.trackOrder[j];
-            this.trackOrder[j] = temp;
-        }
-        return this.trackOrder;
-    }
+    
     setTrack(arrayPos){
     
         var liPos = this.trackOrder[arrayPos]; // convert array index to html index
@@ -37,25 +29,7 @@ class AudioPlaylist{
         $("#"+this.playlistId+ " li").eq(liPos).addClass(this.currentClass);
         this.trackPos = arrayPos; // update based on array index position
     }
-    prevTrack(){
-        if(this.trackPos == 0)
-            this.setTrack(0);
-        else
-            this.setTrack(this.trackPos - 1);
-        this.player.play();
-    }
-    nextTrack(){
-        // if track isn't the last track in array of tracks, go to next track
-        if(this.trackPos < this.length - 1)
-            this.setTrack(this.trackPos+1);
-        else{
-            if(this.shuffle)
-                this.randomizeOrder();
-            this.setTrack(0);
-        }
-        this.player.play();
-            
-    }
+    
     setLoop(val){
         if(val === true)
             this.loop = true;
@@ -63,42 +37,8 @@ class AudioPlaylist{
             this.loop = false;
         return this.loop;
     }
-    setShuffle(val){
-        if(val == this.shuffle) // if no change
-            return val;
-        else{
-            if(val === true){
-                this.randomizeOrder();
-                this.shuffle = true;
-            }
-            else{
-                this.shuffle = false;
-                // empty track array, fill array with indexs in order
-                this.trackOrder = [];
-                for(var i = 0; i < this.length; i++){
-                    this.trackOrder.push(i);
-                }
-                
-                // jump array to track position of currently playing track
-                this.trackPos =  this.trackOrder.indexOf($("."+this.currentClass).index());
-            }
-            return this.shuffle;
-        }
-    }
-    toggleShuffle(){
-        if(this.shuffle === true)
-            this.setShuffle(false);
-        else
-            this.setShuffle(true);
-        return this.shuffle;
-    }
-    toggleLoop(){
-        if(this.loop === true)
-            this.setLoop(false);
-        else
-            this.setLoop(true);
-        return this.loop;
-    }
+    
+    
     constructor(config = {} ){
         
         /***
