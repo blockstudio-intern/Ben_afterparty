@@ -231,13 +231,16 @@
       }
     </script>
   </head>
-  <body style="background-color: #2C9DFF;">	  
-	<!-- Start Nav -->
+  <body style="background-color: #2c9dff">
+    <!-- Start Nav -->
     <div class="nav">
-      <div
+      <a
+	    href="https://blockstudio-intern.github.io/blockstudio.6thanniversary/"
         class="nav-item logo"
         style="background-image: url(img/logo_sm.png)"
-      ></div>
+      >
+	  </a>
+	 
 
       <div class="nav-item link">
         <div
@@ -277,9 +280,6 @@
           </a>
         </div>
       </div>
-
-
-	  
     </div>
 
     <!-- End Nav -->
@@ -294,9 +294,7 @@
 
       <div id="overlay"></div>
     </div>
-    <div class="layer bg-layer">
-		
-	</div>
+    <div class="layer bg-layer"></div>
 
     <div class="scripts">
       <div class="parallax">
@@ -327,11 +325,19 @@
 
     <audio src="" controls id="audioPlayer" style="display: none"></audio>
     <ul id="playlist">
+	<!-- <a class="color gray" data-value="#2C9DFF" href="sound/loops_8bit.mp3" ><li>1</li></a>
+	<a class="color black" data-value="#000" href="sound/master.mp3" ><li>2</li></a>
+	<a class="color blue" data-value="#4F9D00" href="sound/loops_8bit.mp3" ><li>3</li></a> -->
 
-	<div class="color gray" data-value="#2C9DFF"><li><a href="sound/loops_8bit.mp3">1</a></li></div>
-	<div class="color black" data-value="#000"><li><a href="sound/meow_j.wav">2</a></li></div>
-	<div class="color blue" data-value="#4F9D00"><li><a href="sound/loops_8bit.mp3">3</a></li></div>
-    </ul>
+	<li><a class="color gray" href="sound/loops_8bit.mp3" data-value="#2C9DFF"></a></li></span>
+	<li><a class="color black" href="sound/master.mp3" data-value="#000"></a></li></span>
+	<li><a class="color blue" href="sound/stay.mp3" data-value="#4F9D00"></a></li></span>
+	
+    </ul> 
+
+    <!-- <div class="color gray" data-value="#2C9DFF"></div>
+    <div class="color black" data-value="#000"></div>
+    <div class="color blue" data-value="#4F9D00"></div> -->
 
     <div id="mute" class="btn"></div>
 
@@ -360,11 +366,9 @@
       var playlist = new AudioPlaylist();
     </script>
 
-
-  <!-- partial -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script src="./pick.js"></script>
-    
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="./pick.js"></script>
   </body>
 </html>
