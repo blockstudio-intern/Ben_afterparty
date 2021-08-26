@@ -49,11 +49,15 @@ body {
 }
 
 .source-layer5 {
-  background-image: url(img/ben002.png);
+  background-image: url(img/dj_LL.gif);
 }
 
 .source-layer6 {
-  background-image: url(img/ben003.png);
+  background-image: url(img/dj_RR.gif);
+}
+
+.source-layer7 {
+  background-image: url(img/cloud_back.png);
 }
 
 /* Main Styles */
