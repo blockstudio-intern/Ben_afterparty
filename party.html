@@ -8,7 +8,6 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
 	<link rel="shortcut icon" href="./favicon.ico" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,19 +23,20 @@
     <script src="js/two.js"></script>
     <script src="js/has.js"></script>
     <script type="text/javascript" src="//use.typekit.net/edp1hux.js"></script>
+
     <script type="text/javascript">
       try {
         Typekit.load();
       } catch (e) {}
     </script>
-    <link rel="stylesheet" href="./style.css" />
 
+    <link rel="stylesheet" href="./style.css" />
     <script type="text/javascript" src="paper-full.js"></script>
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.core.min.js"
     ></script>
-
+    <!--設定每個案件對應的音色（可更改）-->
     <script type="text/paperscript" canvas="myCanvas">
 
           var text = new PointText(new Point((view.size.width)/2, 50));
@@ -232,6 +232,7 @@
       }
     </script> 
   </head>
+
   <body style="background-color: #2c9dff">
     <!-- Start Nav -->
     <div class="nav">
@@ -241,7 +242,6 @@
         style="background-image: url(img/logo_sm.png)"
       >
 	  </a>
-	 
 
       <div class="nav-item link">
         <div
@@ -284,95 +284,62 @@
     </div>
 
     <!-- End Nav -->
+
+	<!--提示框-->
     <div id="css-modal">
       <input id="modal" class="css-modal-check" type="checkbox" checked />
       <div class="css-modal">
         <label for="modal" class="close"></label>
-                 
 		<img src="img/tip.png" width=800px height=100%>
-        <!--<div class="css-modal-btn"><a href="/#" title="Upgrade"><button class="btn btn-primary btn-md">START</button></a></div> -->
+        </button></a></div> -->
       </div>
-
       <div id="overlay"></div>
     </div>
-    <div class="layer bg-layer"></div>
-
+    
+    <!--背景格線-->
+	<div class="layer bg-layer"></div>
+    
+	<!--左右貓貓-->
     <div class="scripts">
-
-		
-
 		<div class="parallax">			
 			<div class="layer source-layer7"></div>
-						
 		  </div>
 		  <div class="layer source-layer5"></div>
         <div class="layer source-layer6"></div>
-		
-
-
+    <!--雲朵＆中間貓貓視差-->
       <div class="parallax">
-		
         <div class="layer source-layer4"></div>
-        
         <div class="layer source-layer2"></div>
         <div class="layer source-layer1"></div>
-        
+    <!--按鍵音效觸發的canvas，寫這裡才不會調到最後面-->
         <canvas id="myCanvas" resize></canvas>
       </div>
-
+    <!--DJ台-->
 	  <div class="layer source-layer3"></div>
-
-      <!-- <input type="button" value="" />
-
-      Notice the pauses in the loopage. So sad. Why you hurt me so, browsers?
-      <audio loop>
-        <source src="sound/loops_8bit.mp3" type='audio/mpeg; codecs="mp3"' />
-      </audio> -->
 
       <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
       <script src="js/script.js"></script>
       <script src="js/loop.js"></script>
-
       <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.22/paper.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.js"></script>
       <script src="./script.js"></script>
     </div>
-
+    
+	<!--三首背景音樂的播放清單-->
     <audio src="" controls id="audioPlayer" style="display: none"></audio>
     <ul id="playlist">
-	<!-- <a class="color gray" data-value="#2C9DFF" href="sound/loops_8bit.mp3" ><li>1</li></a>
-	<a class="color black" data-value="#000" href="sound/master.mp3" ><li>2</li></a>
-	<a class="color blue" data-value="#4F9D00" href="sound/loops_8bit.mp3" ><li>3</li></a> -->
-
 	<li><a class="color gray" href="sound/loops_8bit.mp3" data-value="#2C9DFF"></a></li></span>
 	<li><a class="color black" href="sound/loops_trap.mp3" data-value="#000"></a></li></span>
 	<li><a class="color blue" href="sound/loops_tech.mp3" data-value="#4F9D00"></a></li></span>
-	
     </ul> 
-
-    <!-- <div class="color gray" data-value="#2C9DFF"></div>
-    <div class="color black" data-value="#000"></div>
-    <div class="color blue" data-value="#4F9D00"></div> -->
-
+	<!--靜音button-->
     <div id="mute" class="btn"></div>
 
     <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
     <script src="audioPlayer.js"></script>
     <script src="mute.js"></script>
     <script>
-      /*
-    Default constructor configuration:
-        autoplay: false,
-        shuffle: false,
-        loop: false,
-        playerId: "audioPlayer",
-        playlistId: "playlist",
-        currentClass: "current-song"
-        
-        
-*/
-
-      // loads the audio player
+   
       var config = {
         autoplay: true,
         loop: true,
